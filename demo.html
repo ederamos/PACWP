@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PACWP Classifieds Demo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+        }
+        
+        .header {
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .header h1 {
+            color: #333;
+            margin: 0;
+            font-size: 24px;
+        }
+        
+        .demo-section {
+            margin-bottom: 40px;
+            padding: 20px;
+            border: 1px solid #e6e6e6;
+            background-color: #f9f9f9;
+        }
+        
+        .demo-section h2 {
+            color: #0645AD;
+            margin-top: 0;
+            font-size: 18px;
+        }
+        
+        .shortcode {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border-left: 4px solid #0645AD;
+            margin: 10px 0;
+            font-family: monospace;
+        }
+        
+        .feature-list {
+            list-style-type: none;
+            padding: 0;
+        }
+        
+        .feature-list li {
+            padding: 5px 0;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .feature-list li:before {
+            content: "✓ ";
+            color: #008000;
+            font-weight: bold;
+        }
+        
+        .craigslist-style {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            padding: 15px;
+            margin: 10px 0;
+        }
+        
+        .listing-example {
+            border-bottom: 1px solid #e6e6e6;
+            padding: 10px 0;
+        }
+        
+        .listing-example h3 {
+            margin: 0 0 5px 0;
+            font-size: 14px;
+            font-weight: normal;
+        }
+        
+        .listing-example h3 a {
+            color: #0645AD;
+            text-decoration: none;
+        }
+        
+        .listing-price {
+            color: #008000;
+            font-weight: bold;
+            font-size: 13px;
+        }
+        
+        .listing-location {
+            color: #666;
+            font-size: 11px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>PACWP Classifieds - Craigslist for WordPress</h1>
+        <p>A complete classified ads solution that brings Craigslist-style functionality to your WordPress site.</p>
+    </div>
+
+    <div class="demo-section">
+        <h2>Key Features</h2>
+        <ul class="feature-list">
+            <li>Custom post type for classified listings</li>
+            <li>Categories and location taxonomies</li>
+            <li>Frontend submission form for users</li>
+            <li>Search and filtering functionality</li>
+            <li>Admin approval system</li>
+            <li>Contact information integration</li>
+            <li>Responsive Craigslist-style design</li>
+            <li>SEO-friendly URLs and structure</li>
+        </ul>
+    </div>
+
+    <div class="demo-section">
+        <h2>How to Display Listings</h2>
+        <p>Use these shortcodes to display listings on any page or post:</p>
+        
+        <div class="shortcode">[pacwp_listings]</div>
+        <p>Shows all listings with default settings</p>
+        
+        <div class="shortcode">[pacwp_listings category="cars-trucks" limit="10"]</div>
+        <p>Shows 10 listings from the "cars-trucks" category</p>
+        
+        <div class="shortcode">[pacwp_listings location="new-york" limit="5"]</div>
+        <p>Shows 5 listings from New York</p>
+    </div>
+
+    <div class="demo-section">
+        <h2>User Submission Form</h2>
+        <p>Allow users to submit their own listings:</p>
+        
+        <div class="shortcode">[pacwp_submit_form]</div>
+        <p>This creates a complete submission form with all necessary fields including title, description, category, location, price, and contact information.</p>
+    </div>
+
+    <div class="demo-section">
+        <h2>Search and Filter</h2>
+        <p>Add search functionality to your listings:</p>
+        
+        <div class="shortcode">[pacwp_search_form]</div>
+        <p>Creates a search form with category and location filters</p>
+        
+        <div class="shortcode">[pacwp_search_form show_categories="false"]</div>
+        <p>Search form without category dropdown</p>
+    </div>
+
+    <div class="demo-section">
+        <h2>Example Listings Display</h2>
+        <p>Here's how listings would appear with Craigslist-style formatting:</p>
+        
+        <div class="craigslist-style">
+            <div class="listing-example">
+                <h3><a href="#">2018 Honda Civic - Excellent Condition</a></h3>
+                <div class="listing-price">$15,500</div>
+                <div class="listing-location">Brooklyn, NY</div>
+                <p style="font-size: 12px; color: #333; margin: 5px 0;">Low mileage, one owner, all maintenance records available. Perfect for commuting or family use.</p>
+                <div style="font-size: 10px; color: #999;">Dec 15</div>
+            </div>
+            
+            <div class="listing-example">
+                <h3><a href="#">Spacious 2BR Apartment - Available January</a></h3>
+                <div class="listing-price">$2,800/month</div>
+                <div class="listing-location">Manhattan, NY</div>
+                <p style="font-size: 12px; color: #333; margin: 5px 0;">Beautiful apartment with natural light, updated kitchen, and close to subway. Pet-friendly building.</p>
+                <div style="font-size: 10px; color: #999;">Dec 14</div>
+            </div>
+            
+            <div class="listing-example">
+                <h3><a href="#">iPhone 13 Pro - Unlocked</a></h3>
+                <div class="listing-price">$650</div>
+                <div class="listing-location">Queens, NY</div>
+                <p style="font-size: 12px; color: #333; margin: 5px 0;">Excellent condition, includes original box and charger. No scratches or dents.</p>
+                <div style="font-size: 10px; color: #999;">Dec 14</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="demo-section">
+        <h2>Default Categories</h2>
+        <p>The plugin comes with pre-configured categories similar to Craigslist:</p>
+        <ul>
+            <li><strong>For Sale:</strong> cars-trucks, electronics, furniture, general</li>
+            <li><strong>Housing:</strong> apartments-housing, rooms-shared, housing-wanted</li>
+            <li><strong>Jobs:</strong> accounting-finance, admin-office, art-media-design, general-labor</li>
+            <li><strong>Services:</strong> automotive, beauty, computer, household</li>
+            <li><strong>Community:</strong> activities, artists, childcare, general</li>
+        </ul>
+    </div>
+
+    <div class="demo-section">
+        <h2>Installation Instructions</h2>
+        <ol>
+            <li>Upload the plugin files to <code>/wp-content/plugins/pacwp-classifieds/</code></li>
+            <li>Activate the plugin in your WordPress admin</li>
+            <li>Create pages for listings, submissions, and search</li>
+            <li>Add the appropriate shortcodes to each page</li>
+            <li>Customize the appearance with CSS if needed</li>
+        </ol>
+    </div>
+
+    <div class="demo-section">
+        <h2>Admin Features</h2>
+        <ul class="feature-list">
+            <li>Manage all listings from WordPress admin</li>
+            <li>Approve or reject pending submissions</li>
+            <li>Edit listing details and contact information</li>
+            <li>Manage categories and locations</li>
+            <li>View submission statistics</li>
+        </ul>
+    </div>
+</body>
+</html>
