@@ -339,5 +339,11 @@ class PACWP_Classifieds {
     }
 }
 
+// Include admin functionality
+if (is_admin()) {
+    require_once PACWP_PLUGIN_PATH . 'includes/admin.php';
+    require_once PACWP_PLUGIN_PATH . 'includes/demo-content.php';
+}
+
 // Initialize the plugin
 new PACWP_Classifieds();
